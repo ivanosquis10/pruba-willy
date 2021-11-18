@@ -1,0 +1,116 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Establecemos el tamaño del body, color de fondo, tamaño y fuente que va a tener la pagina */
+body {
+  height: 100vh;
+  background-color: #232946;
+  color: #fffffe;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Reseteamos los valores por defectos de los a */
+a {
+  text-decoration: none;
+  color: #fffffe;
+}
+
+/* Establecemos un tamaño a las imagenes */
+/* puedes modificar esto o quitarla para que la imagen salga con su tamaño por defecto */
+img {
+  width: 150px;
+}
+
+/* Este es el header, establecemos el tamaño del contenedor y un margin 0 auto para centrarlo en la pantalla */
+/* Usamos display flex para posicionar los elementos, esto lo que permite es poner elementos mas facil, centrarlos, moverlos de derecha a izquierda o viceversar */
+.header {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f25f4c;
+  padding: 20px;
+}
+
+/* Aqui cambiamos los a de la clase "nav"  */
+.nav a {
+  /* font-weight: bold; */
+  /* background-color: #9c5401; */
+  padding: 10px;
+  border-radius: 5px;
+  border-bottom: 1px solid #0f0e17;
+}
+
+.nav a:hover {
+  background-color: #09080f;
+  transition: 0.2s ease-in-out;
+}
+
+/* Otra vez flex, para posicionar los elemetnos mas facil */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ul-principal {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5vw;
+  transition: all 0.3s ease 0s;
+}
+
+.carreras {
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.carreras span img {
+  width: 20px;
+  /* transform: rotate(90deg); */
+}
+
+.ul-secundario {
+  display: none;
+  position: absolute;
+  top: 65px;
+  right: -115px;
+}
+
+.ul-secundario > li {
+  width: auto;
+  /* transform: translateX(-20px); */
+  border-bottom: solid 1px #fff;
+  text-align: center;
+  background-color: #0f0e17;
+}
+
+.ul-secundario > li:hover {
+  background-color: #201d30;
+}
+
+.carreras:hover > .ul-secundario {
+  display: block;
+}
